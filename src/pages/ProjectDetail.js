@@ -88,11 +88,12 @@ img {
 }
 @media ( max-width: 1300px ) {
     padding-top: 10vh;
-    min-height: 60vh;
+    min-height: 50vh;
     h3 {
         font-size: 1.5rem;
     }
     img {
+    object-fit: contain;
     width: 100%;
     height: 45vh;
     padding-top: 3rem;
@@ -129,7 +130,7 @@ align-items: flex-start;
 flex-direction: column;
 margin: 1rem 5rem;
 @media ( max-width: 1300px ) {
-    display: block;
+    justify-content: center;
     width: 95%;
     margin: 1rem 2rem;
     }
@@ -174,7 +175,7 @@ img {
     img {
     object-fit: contain;
     width: 100%;
-    height: 45vh;
+    height: 60vh;
     padding: 1rem 0rem;
     }
     }
