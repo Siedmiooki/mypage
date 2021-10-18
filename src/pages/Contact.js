@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { pageAnim, titleAnim, photoAnim2, fadeAnim2, pAnim } from "../pageAnimation";
-import { HideStyled } from "../styles"
+import { pageAnim, photoAnim2, fadeAnim2, pAnim } from "../pageAnimation";
+// import { HideStyled } from "../styles"
 import styled from "styled-components"
 import ScrollTop from "../components/ScrollTop";
 import { StyledEmailIcon, StyledLinkedinSquare, StyledGithubSquare, StyledFacebookSquare } from "../styles";
@@ -12,9 +12,13 @@ const Contact = () => {
 
     const { register, handleSubmit, reset } = useForm();
     const sendMessage = async data => {
-        console.log(data)
-        reset()
-        axios.get('https://us-central1-myhomepagemailsender.cloudfunctions.net/sendMail').then(res => console.log(res)).catch(err => console.log(err))
+        await axios.get('https://us-central1-myhomepagemailsender.cloudfunctions.net/sendMail', {
+            params: {
+                name: data.name,
+                email: data.email,
+                message: data.message
+            }
+        }).then(res => { console.log(res); reset() }).catch(err => console.log(err))
     };
 
     return (

@@ -41,6 +41,7 @@ export const ImageBoxStyled = styled(motion.div)`
 z-index: 2;
 width: 100%;
 padding: 1rem;
+display: flex;
 flex-wrap: nowrap;
 @media ( max-width: 1300px ) {
     width: 100%;
