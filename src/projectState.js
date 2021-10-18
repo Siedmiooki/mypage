@@ -7,7 +7,7 @@ import homepage1 from "./img/homepage_big.jpg";
 export const ProjectState = () => {
     return [
         {
-            title: "IGDB App",
+            title: "Game Database App",
             mainImg: igdb_app,
             secondaryImg: igdb_app2,
             url: "/work/igdb_app",
