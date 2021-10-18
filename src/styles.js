@@ -24,7 +24,7 @@ export const AnimIconBox = styled(motion.div)`
 z-index: 2;
 display: inline-flex;
 overflow: hidden;
-padding: 0.2rem;
+padding: 0rem 0.5rem;
 `
 
 export const ImageBoxContainer = styled.div`

@@ -34,6 +34,14 @@ export const photoAnim = {
     }
 }
 
+export const ClickMeAnim = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 0.4,
+        transition: { deley: 1.5, duration: 0.75, ease: "easeOut" }
+    }
+}
+
 export const photoAnim2 = {
     hidden: {
         scale: 1.5,

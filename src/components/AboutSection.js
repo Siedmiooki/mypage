@@ -25,7 +25,7 @@ const AboutSection = () => {
                 </Link>
             </DescriptionStyled>
             <ImageBoxContainer>
-                <ImageBoxStyled >
+                <ImageBoxStyled>
                     <AnimIconBox variants={photoAnim2}>
                         <StyledReactLogo />
                     </AnimIconBox>
