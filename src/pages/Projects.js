@@ -66,7 +66,7 @@ const MyProjects = () => {
 
 const HideStyled = styled.div`
 overflow: hidden;
-position: relative
+position: relative;
 `
 
 const ClickMeStyled = styled.button`
@@ -74,9 +74,9 @@ position: absolute;
 display: flex;
 align-items: flex-end;
 justify-content: center;
-top: 10%;
+top: 2%;
 left: 0;
-height: 90%;
+height: 98%;
 width: 100%;
 background: black;
 opacity: 0;
@@ -90,9 +90,11 @@ padding-bottom: 8rem;
     opacity: 0.9;
 }
 @media ( max-width: 1300px ) {
-    background: black;
-    opacity: 0.1;
-    border: none;
+background: black;
+opacity: 0.1;
+border: none;
+top: 10%;
+height: 90%;
 h1 {
 font-size: 2rem;
 padding-bottom: 2rem;
