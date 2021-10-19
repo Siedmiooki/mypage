@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { pageAnim, photoAnim2, fadeAnim2, pAnim } from "../pageAnimation";
-// import { HideStyled } from "../styles"
 import styled from "styled-components"
 import ScrollTop from "../components/ScrollTop";
 import { StyledEmailIcon, StyledLinkedinSquare, StyledGithubSquare, StyledFacebookSquare } from "../styles";
@@ -68,6 +67,72 @@ const Contact = () => {
     );
 }
 
+// Styling
+
+const ContactStyled = styled(motion.div)`
+display: flex;
+padding: 5rem 10rem;
+background: black;
+min-height: 90vh;
+@media ( max-width: 1300px ) {
+    flex-direction: column-reverse;
+    padding: 2rem;
+    align-items: center;
+    }
+`
+
+const SocialContainerStyled = styled(motion.div)`
+flex: 2;
+margin: 1rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+@media ( max-width: 1300px ) {
+    padding: 0rem 1rem;
+}
+`
+
+const SocialStyled = styled(motion.div)`
+/* background: #282828; */
+padding: 1rem;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+p {
+    padding: 0rem 1rem;
+@media ( max-width: 1300px ) {
+    font-size: 1rem;
+ }
+}
+`
+
+const FormContainerStyled = styled(motion.div)`
+background: black;
+flex: 2;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+@media ( max-width: 1300px ) {
+    padding: 2rem 0rem 4rem 0rem;
+}
+`
+
+const FormBoxStyled = styled(motion.form)`
+display: flex;
+flex-direction: column;
+width: 60%;
+gap: 1rem;
+background: black;
+padding: 3rem 2rem;
+border-radius: 2%;
+min-width: 25rem;
+max-width: 30rem;
+@media ( max-width: 1300px ) {
+    padding: 0rem;
+}
+`
+
 const ButtonStyled = styled(motion.button)`
     background: #FFA41B;
     color: black;
@@ -129,78 +194,6 @@ const InputStyled = styled(motion.input)`
 :valid {
     box-shadow: rgba(3, 253, 3, 0.418) 5px 5px, rgba(101, 240, 46, 0.3) 10px 10px, rgba(69, 236, 47, 0.2) 15px 15px, rgba(46, 240, 78, 0.1) 20px 20px, rgba(122, 207, 25, 0.05) 25px 25px;
 }
-
 `
-
-const FormBoxStyled = styled(motion.form)`
-display: flex;
-flex-direction: column;
-width: 60%;
-gap: 1rem;
-background: black;
-padding: 3rem 2rem;
-border-radius: 2%;
-min-width: 25rem;
-max-width: 30rem;
-@media ( max-width: 1300px ) {
-    padding: 0rem;
-}
-`
-
-const FormContainerStyled = styled(motion.div)`
-background: black;
-flex: 2;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-@media ( max-width: 1300px ) {
-    padding: 2rem 0rem 4rem 0rem;
-}
-`
-
-const ContactStyled = styled(motion.div)`
-display: flex;
-padding: 5rem 10rem;
-background: black;
-min-height: 90vh;
-@media ( max-width: 1300px ) {
-    flex-direction: column-reverse;
-    padding: 2rem;
-    align-items: center;
-    }
-`
-
-const SocialContainerStyled = styled(motion.div)`
-flex: 2;
-margin: 1rem;
-display: flex;
-flex-direction: column;
-justify-content: center;
-@media ( max-width: 1300px ) {
-    padding: 0rem 1rem;
-}
-`
-const SocialStyled = styled(motion.div)`
-/* background: #282828; */
-padding: 1rem;
-display: flex;
-justify-content: flex-start;
-align-items: center;
-p {
-    padding: 0rem 1rem;
-@media ( max-width: 1300px ) {
-    font-size: 1rem;
- }
-}
-`
-
-
-
-
-// const Hide = styled.div`
-// overflow: hidden;
-// `
-
 
 export default Contact;

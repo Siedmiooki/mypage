@@ -256,7 +256,8 @@ width: ${iconSize};
 color: #FFA41B;
 transition: 0.5s;
 :hover {
-    transform: scale(1.1)
+    transform: scale(1.1);
+    color: rgba(240, 46, 170, 0.6)
   }
 @media ( max-width: 1300px ) {
     height: ${mobileIconSize};
@@ -270,7 +271,8 @@ width: ${iconSize};
 color: #FFA41B;
 transition: 0.5s;
 :hover {
-    transform: scale(1.1)
+    transform: scale(1.1);
+    color: rgba(240, 46, 170, 0.6)
   }
 @media ( max-width: 1300px ) {
     height: ${mobileIconSize};
@@ -284,7 +286,8 @@ width: ${iconSize};
 color: #FFA41B;
 transition: 0.5s;
 :hover {
-    transform: scale(1.1)
+    transform: scale(1.1);
+    color: rgba(240, 46, 170, 0.6)
   }
 @media ( max-width: 1300px ) {
     height: ${mobileIconSize};
@@ -299,6 +302,7 @@ color: #FFA41B;
 transition: 0.5s;
 :hover {
     transform: scale(1.1);
+    color: rgba(240, 46, 170, 0.6)
   }
 @media ( max-width: 1300px ) {
     height: ${mobileIconSize};

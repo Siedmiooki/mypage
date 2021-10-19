@@ -33,11 +33,11 @@ const ProjectDetail = () => {
                             <motion.button>Live demo</motion.button>
                         </a>
                     </StyledButtonContainer>
-                    <InfosStyled>
+                    <InfoContainerStyled>
                         {project.info.map((info) => (
                             <Info title={info.title} description={info.description} key={info.title} />
                         ))}
-                    </InfosStyled>
+                    </InfoContainerStyled>
                     <ImageDisplayStyled>
                         <img src={project.secondaryImg} alt="secondaryImg" />
                     </ImageDisplayStyled>
@@ -57,6 +57,8 @@ const Info = ({ title, description }) => {
         </InfoStyled>
     )
 }
+
+// Styling
 
 const DetailsStyled = styled(motion.div)`
 color:  white;
@@ -122,7 +124,7 @@ button {
 }
 `
 
-const InfosStyled = styled.div`
+const InfoContainerStyled = styled.div`
 min-height: 60vh;
 width: 60%;
 display: flex;

@@ -4,7 +4,7 @@ import igdb_app from "../img/igdb_app_big.jpg";
 import player_app from "../img/player_app_big2.jpg";
 import homepage1 from "../img/homepage_big.jpg";
 import { motion } from "framer-motion";
-import { pageAnim, ClickMeAnim, fadeAnim, lineAnim, lineAnim2, lineAnim3, photoAnim, frameAnim, frameContainer } from "../pageAnimation";
+import { pageAnim, fadeAnim, lineAnim, lineAnim2, lineAnim3, photoAnim, frameAnim, frameContainer } from "../pageAnimation";
 import { useScroll } from "../components/useScroll";
 import ScrollTop from "../components/ScrollTop";
 
@@ -15,13 +15,14 @@ const MyProjects = () => {
     const [element2, controls2] = useScroll();
 
     return (
-        <ProjectsStyled variants={pageAnim} initial="hidden" animate="show" exit="exit">
+        <ProjectContainerStyled variants={pageAnim} initial="hidden" animate="show" exit="exit">
             <motion.div variants={frameContainer}>
                 <Frame1 variants={frameAnim}></Frame1>
                 <Frame2 variants={frameAnim}></Frame2>
                 <Frame3 variants={frameAnim}></Frame3>
                 <Frame4 variants={frameAnim}></Frame4>
                 <Frame5 variants={frameAnim}></Frame5>
+                <Frame6 variants={frameAnim}></Frame6>
             </motion.div>
             <ProjectStyled>
                 <motion.h2 variants={fadeAnim}>Game Database App</motion.h2>
@@ -60,9 +61,66 @@ const MyProjects = () => {
                 </Link>
             </ProjectStyled>
             <ScrollTop />
-        </ProjectsStyled>
+        </ProjectContainerStyled>
     );
 }
+
+// Styling
+
+const ProjectContainerStyled = styled(motion.div)`
+min-height: 100vh;
+background: #fff;
+display: flex;
+flex-direction: column;
+align-items: center;
+overflow: hidden;
+padding: 5rem 10rem;
+h2 {
+    font-size: 3rem;
+    padding: 0.5rem 0rem;
+    }
+@media ( max-width: 1300px ) {
+        padding: 3rem 1rem;
+h2 {
+    font-size: 2rem;
+    }
+}
+`
+
+const ProjectStyled = styled(motion.div)`
+position: relative;
+padding-bottom: 5rem;
+width: 80%;
+.line {
+    height: 0.2rem;
+    background: #FFA41B;
+    padding-bottom: 0.1rem;
+    padding-top: 0.1rem;
+}
+.line2 {
+    height: 0.12rem;
+    background: #FFA41B;
+    padding-bottom: 0.1rem;
+    padding-top: 0.1rem;
+}
+
+img {
+    width: 100%;
+    height: 70vh;
+    object-fit: contain;
+    padding-top: 2rem;
+}
+@media ( max-width: 1300px ) {
+    width: 100%;
+    height: 70vh;
+    padding: 1rem 0rem;
+img {
+    width: 100%;
+    height: 60vh;
+    padding-top: 4rem;
+}
+    }
+`
 
 const HideStyled = styled.div`
 overflow: hidden;
@@ -102,79 +160,29 @@ padding-bottom: 2rem;
 }
 `
 
-const ProjectsStyled = styled(motion.div)`
-min-height: 100vh;
-background: #fff;
-display: flex;
-flex-direction: column;
-align-items: center;
-overflow: hidden;
-padding: 5rem 10rem;
-h2 {
-    font-size: 3rem;
-    padding: 0.5rem 0rem;
-    }
-@media ( max-width: 1300px ) {
-        padding: 3rem 1rem;
-h2 {
-    font-size: 2rem;
-    }
-}
-`
-const ProjectStyled = styled(motion.div)`
-position: relative;
-padding-bottom: 5rem;
-width: 80%;
-.line {
-    height: 0.2rem;
-    background: #FFA41B;
-    padding-bottom: 0.1rem;
-    padding-top: 0.1rem;
-}
-.line2 {
-    height: 0.12rem;
-    background: #FFA41B;
-    padding-bottom: 0.1rem;
-    padding-top: 0.1rem;
-}
-
-img {
-    width: 100%;
-    height: 70vh;
-    object-fit: contain;
-    padding-top: 2rem;
-}
-@media ( max-width: 1300px ) {
-    width: 100%;
-    height: 70vh;
-    padding: 1rem 0rem;
-img {
-    width: 100%;
-    height: 60vh;
-    padding-top: 4rem;
-}
-    }
-`
 const Frame1 = styled(motion.div)`
 position: fixed;
 left: 0;
 top: 10%;
 width: 100%;
 height: 100vh;
-background: #e60606;
+background: #000000;
 z-index: 2;
 `
 const Frame2 = styled(Frame1)`
-background: #e2500c;
+background: #363634;
 `
 const Frame3 = styled(Frame1)`
-background: #e07d0c;
+background: #4d4b4a;
 `
 const Frame4 = styled(Frame1)`
-background: #ecb10c;
+background: #797672;
 `
 const Frame5 = styled(Frame1)`
-background: #e4e707;
+background: #b3b1ac;
+`
+const Frame6 = styled(Frame1)`
+background: #e9e9e4;
 `
 
 export default MyProjects;
