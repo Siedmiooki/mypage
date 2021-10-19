@@ -24,7 +24,10 @@ const Contact = () => {
     return (
         <ContactStyled variants={pageAnim} initial="hidden" animate="show" exit="exit">
             <SocialContainerStyled>
-                <SocialStyled variants={photoAnim2}>
+                <SocialStyled variants={photoAnim2} onHover={{
+                    scale: 1.2,
+                    transition: { duration: 1 },
+                }}>
                     <a href="mailto:karpowicz.jan@gmail.com">
                         <StyledEmailIcon />
                     </a>
@@ -51,11 +54,6 @@ const Contact = () => {
             </SocialContainerStyled>
             <FormContainerStyled onSubmit={handleSubmit(sendMessage)}>
                 <FormBoxStyled>
-                    {/* <HideStyled>
-                        <motion.h3 variants={titleAnim}>Mail me directly</motion.h3>
-                    </HideStyled> */}
-
-
                     <InputStyled variants={pAnim} type="name" minLength="3" required {...register("name")} placeholder="name" />
 
                     <InputStyled variants={pAnim} type="email" required {...register("email")} placeholder="e-mail"></InputStyled>
@@ -63,9 +61,6 @@ const Contact = () => {
                     <TextareaStyled variants={pAnim} rows="11" placeholder="message" required minLength="40" {...register("message")}></TextareaStyled>
 
                     <ButtonStyled variants={fadeAnim2}>Send</ButtonStyled>
-
-
-
                 </FormBoxStyled>
             </FormContainerStyled>
             <ScrollTop />
@@ -172,6 +167,7 @@ min-height: 90vh;
 @media ( max-width: 1300px ) {
     flex-direction: column-reverse;
     padding: 2rem;
+    align-items: center;
     }
 `
 

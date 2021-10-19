@@ -53,7 +53,7 @@ export const ProjectState = () => {
             secondaryImg: homepage2,
             url: "/work/homepage",
             git: "https://github.com/Siedmiooki/mypage",
-            live: "https://hardcore-bell-2605b8.netlify.app",
+            live: "https://optimistic-carson-1a56a2.netlify.app",
             info: [
                 {
                     title: "Project overview",
