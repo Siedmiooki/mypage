@@ -152,7 +152,7 @@ export const frameAnim = {
     show: {
         x: "100%",
         skew: "0deg",
-        transition: { ease: "easeOut", duration: 0.8 },
+        transition: { ease: "easeOut", duration: 0.9 },
     }
 }
 

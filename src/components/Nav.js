@@ -63,13 +63,13 @@ li {
 }
 @media ( max-width: 1300px ) {
     flex-direction: column;
-    padding: 2rem 1rem;
+    padding: 1rem 0 1.5rem 0;
     #logo {
         display: inline-block;
-        margin: 1rem;
+        margin: 0.5rem;
     }
 ul {
-        padding: 1rem;
+        padding: 0.5rem;
         justify-content: space-around;
         width: 100%;
 }
