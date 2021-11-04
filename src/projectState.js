@@ -4,9 +4,33 @@ import player_app from "./img/player_app_big2.jpg";
 import player_app2 from "./img/player_app_big.jpg";
 import homepage1 from "./img/homepage_big.jpg";
 import homepage2 from "./img/homepage_big2.jpg";
+import crypto1 from "./img/cryptoHQ_big.jpg";
+import crypto2 from "./img/cryptoHQ_big2.jpg";
+import crypto3 from "./img/cryptoHQ_big3.jpg";
 
 export const ProjectState = () => {
     return [
+        {
+            title: "Crypto HQ",
+            mainImg: crypto1,
+            secondaryImg: crypto2,
+            thirdImg: crypto3,
+            url: "/work/crypto_hq",
+            git: "https://github.com/Siedmiooki/cryptoapp",
+            live: "https://flamboyant-elion-081156.netlify.app",
+            info: [
+                {
+                    title: "Project overview",
+                    description:
+                        "Crypto HQ is an application providing informations about most popular cryptocurrencies and exchange markets with alot of details, graphs, history data. News section contains many crypto articles from different sources.",
+                },
+                {
+                    title: "Technology",
+                    description:
+                        "Crypto HQ was built with React, Redux Toolkit, Ant Design and Rapid API.",
+                },
+            ],
+        },
         {
             title: "Game Database App",
             mainImg: igdb_app,
@@ -24,6 +48,7 @@ export const ProjectState = () => {
                     title: "Technology",
                     description:
                         "Game Database App was built with React, Redux, Framer Motion, Styled Components and rawg.io API.",
+
                 },
             ],
         },

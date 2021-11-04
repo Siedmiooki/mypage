@@ -41,6 +41,9 @@ const ProjectDetail = () => {
                     <ImageDisplayStyled>
                         <img src={project.secondaryImg} alt="secondaryImg" />
                     </ImageDisplayStyled>
+                    {project.thirdImg && <ImageDisplayStyled>
+                        <img src={project.thirdImg} alt="thirdImg" />
+                    </ImageDisplayStyled>}
                     <ScrollTop />
                 </DetailsStyled>
             )}
@@ -87,6 +90,7 @@ img {
     width: 100%;
     height: 70vh;
     object-fit: cover;
+    margin-top: 2rem;
 }
 @media ( max-width: 1300px ) {
     padding-top: 10vh;
@@ -168,6 +172,7 @@ min-height: 50vh;
 display: flex;
 flex-direction: column;
 align-items: center;
+margin-bottom: 2rem;
 img {
     width: 100%;
     height: 70vh;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import crypto_hq from "../img/cryptoHQ_big.jpg";
 import igdb_app from "../img/igdb_app_big.jpg";
 import player_app from "../img/player_app_big2.jpg";
 import homepage1 from "../img/homepage_big.jpg";
@@ -13,18 +14,34 @@ const MyProjects = () => {
 
     const [element, controls] = useScroll();
     const [element2, controls2] = useScroll();
+    const [element3, controls3] = useScroll();
 
     return (
         <ProjectContainerStyled variants={pageAnim} initial="hidden" animate="show" exit="exit">
-            <motion.div variants={frameContainer}>
-                <Frame1 variants={frameAnim}></Frame1>
-                <Frame2 variants={frameAnim}></Frame2>
-                <Frame3 variants={frameAnim}></Frame3>
-                <Frame4 variants={frameAnim}></Frame4>
-                <Frame5 variants={frameAnim}></Frame5>
-                <Frame6 variants={frameAnim}></Frame6>
-            </motion.div>
+            {/* <motion.div variants={frameContainer}>
+                <Frame1 variants={frameAnim}>
+                    <motion.img variants={photoAnim} src={igdb_app} alt="igdb_app" />
+                </Frame1>
+                <Frame2 variants={frameAnim}>
+                    <motion.img variants={photoAnim} src={player_app} alt="player_app" />
+                </Frame2>
+                <Frame3 variants={frameAnim}>
+                    <motion.img variants={photoAnim} src={homepage1} alt="homepage" />
+                </Frame3>
+            </motion.div> */}
             <ProjectStyled>
+                <motion.h2 variants={fadeAnim}>Crypto HQ App</motion.h2>
+                <motion.div variants={lineAnim} className="line"></motion.div>
+                <motion.div variants={lineAnim2} className="line"></motion.div>
+                <motion.div variants={lineAnim3} className="line"></motion.div>
+                <Link to="/work/crypto_hq">
+                    <HideStyled>
+                        <motion.img variants={photoAnim} src={crypto_hq} alt="crypto_hq" />
+                        <ClickMeStyled><h1>PROJECT DETAILS</h1></ClickMeStyled>
+                    </HideStyled>
+                </Link>
+            </ProjectStyled>
+            <ProjectStyled ref={element} variants={fadeAnim} animate={controls} initial="hidden">
                 <motion.h2 variants={fadeAnim}>Game Database App</motion.h2>
                 <motion.div variants={lineAnim} className="line"></motion.div>
                 <motion.div variants={lineAnim2} className="line"></motion.div>
@@ -36,7 +53,7 @@ const MyProjects = () => {
                     </HideStyled>
                 </Link>
             </ProjectStyled>
-            <ProjectStyled ref={element} variants={fadeAnim} animate={controls} initial="hidden">
+            <ProjectStyled ref={element2} variants={fadeAnim} animate={controls2} initial="hidden">
                 <h2>Player App</h2>
                 <motion.div variants={lineAnim} className="line"></motion.div>
                 <motion.div variants={lineAnim2} className="line"></motion.div>
@@ -48,7 +65,7 @@ const MyProjects = () => {
                     </HideStyled>
                 </Link>
             </ProjectStyled>
-            <ProjectStyled ref={element2} variants={fadeAnim} animate={controls2} initial="hidden">
+            <ProjectStyled ref={element3} variants={fadeAnim} animate={controls3} initial="hidden">
                 <h2>My Homepage</h2>
                 <motion.div variants={lineAnim} className="line"></motion.div>
                 <motion.div variants={lineAnim2} className="line"></motion.div>
