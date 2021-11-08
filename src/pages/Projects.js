@@ -164,7 +164,7 @@ opacity: 0;
 border-radius: 2%;
 transition: all 1s ease;
 h1 {
-font-size: 5rem;
+font-size: 4rem;
 padding-bottom: 8rem;
 color: #FFA41B;
 }
@@ -185,8 +185,8 @@ padding-bottom: 2rem;
 `
 
 const ZoomInStyled = styled(ZoomIn)`
-width: 16rem;
-height: 16rem;
+width: 12rem;
+height: 12rem;
 color: #FFA41B;
 @media ( max-width: 1300px ) {
     width: 8rem;
