@@ -102,7 +102,6 @@ img {
     object-fit: contain;
     width: 100%;
     height: 45vh;
-    padding-top: 3rem;
     }
 }
 `
@@ -179,10 +178,12 @@ img {
     object-fit: cover;
 };
 @media ( max-width: 1300px ) {
+    margin-bottom: 0;
+    min-height: 40vh;
     img {
     object-fit: contain;
     width: 100%;
-    height: 60vh;
+    height: 40vh;
     padding: 1rem 0rem;
     }
     }

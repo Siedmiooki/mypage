@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { pageAnim, fadeAnim, lineAnim, lineAnim2, lineAnim3, photoAnim, frameAnim, frameContainer } from "../pageAnimation";
 import { useScroll } from "../components/useScroll";
 import ScrollTop from "../components/ScrollTop";
+import { ZoomIn } from "@styled-icons/bootstrap/ZoomIn";
 
 
 const MyProjects = () => {
@@ -37,7 +38,10 @@ const MyProjects = () => {
                 <Link to="/work/crypto_hq">
                     <HideStyled>
                         <motion.img variants={photoAnim} src={crypto_hq} alt="crypto_hq" />
-                        <ClickMeStyled><h1>PROJECT DETAILS</h1></ClickMeStyled>
+                        <ClickMeStyled>
+                            <ZoomInStyled />
+                            <h1>PROJECT DETAILS</h1>
+                        </ClickMeStyled>
                     </HideStyled>
                 </Link>
             </ProjectStyled>
@@ -49,7 +53,7 @@ const MyProjects = () => {
                 <Link to="/work/igdb_app">
                     <HideStyled>
                         <motion.img variants={photoAnim} src={igdb_app} alt="igdb_app" />
-                        <ClickMeStyled><h1>PROJECT DETAILS</h1></ClickMeStyled>
+                        <ClickMeStyled><ZoomInStyled /><h1>PROJECT DETAILS</h1></ClickMeStyled>
                     </HideStyled>
                 </Link>
             </ProjectStyled>
@@ -61,7 +65,7 @@ const MyProjects = () => {
                 <Link to="/work/player_app">
                     <HideStyled>
                         <motion.img variants={photoAnim} src={player_app} alt="player_app" />
-                        <ClickMeStyled><h1>PROJECT DETAILS</h1></ClickMeStyled>
+                        <ClickMeStyled><ZoomInStyled /><h1>PROJECT DETAILS</h1></ClickMeStyled>
                     </HideStyled>
                 </Link>
             </ProjectStyled>
@@ -73,7 +77,7 @@ const MyProjects = () => {
                 <Link to="/work/homepage">
                     <HideStyled>
                         <motion.img variants={photoAnim} src={homepage1} alt="homepage" />
-                        <ClickMeStyled><h1>PROJECT DETAILS</h1></ClickMeStyled>
+                        <ClickMeStyled><ZoomInStyled /><h1>PROJECT DETAILS</h1></ClickMeStyled>
                     </HideStyled>
                 </Link>
             </ProjectStyled>
@@ -147,26 +151,29 @@ position: relative;
 const ClickMeStyled = styled.button`
 position: absolute;
 display: flex;
-align-items: flex-end;
-justify-content: center;
-top: 2%;
+flex-direction: column;
+align-items: center;
+justify-content: flex-end;
+top: 0;
 left: 0;
-height: 98%;
+height: 100%;
 width: 100%;
-background: black;
+background: transparent !important;
+border: none;
 opacity: 0;
 border-radius: 2%;
 transition: all 1s ease;
 h1 {
 font-size: 5rem;
 padding-bottom: 8rem;
+color: #FFA41B;
 }
 &:hover {
-    opacity: 0.9;
+    opacity: 0.5;
 }
 @media ( max-width: 1300px ) {
-background: black;
-opacity: 0.1;
+justify-content: center;
+opacity: 0.5;
 border: none;
 top: 10%;
 height: 90%;
@@ -174,6 +181,16 @@ h1 {
 font-size: 2rem;
 padding-bottom: 2rem;
 }
+}
+`
+
+const ZoomInStyled = styled(ZoomIn)`
+width: 16rem;
+height: 16rem;
+color: #FFA41B;
+@media ( max-width: 1300px ) {
+    width: 8rem;
+    height: 8rem;
 }
 `
 
