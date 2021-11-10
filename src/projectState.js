@@ -42,7 +42,7 @@ export const ProjectState = () => {
                 {
                     title: "Project overview",
                     description:
-                        "React application providing alot of informations about popular, upcomming and recent video games with details on click funcionality. Search feature alows to find any game info from database.",
+                        "React application providing alot of informations about popular, upcomming and recent video games with details on click funcionality. Search feature alows to find any informations about a game from API database.",
                 },
                 {
                     title: "Technology",

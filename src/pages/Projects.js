@@ -5,7 +5,7 @@ import igdb_app from "../img/igdb_app_big.jpg";
 import player_app from "../img/player_app_big2.jpg";
 import homepage1 from "../img/homepage_big.jpg";
 import { motion } from "framer-motion";
-import { pageAnim, fadeAnim, lineAnim, lineAnim2, lineAnim3, photoAnim, frameAnim, frameContainer } from "../pageAnimation";
+import { pageAnim, fadeAnim, lineAnim, lineAnim2, lineAnim3, photoAnim, ClickMeAnim } from "../pageAnimation";
 import { useScroll } from "../components/useScroll";
 import ScrollTop from "../components/ScrollTop";
 import { ZoomIn } from "@styled-icons/bootstrap/ZoomIn";
@@ -19,17 +19,6 @@ const MyProjects = () => {
 
     return (
         <ProjectContainerStyled variants={pageAnim} initial="hidden" animate="show" exit="exit">
-            {/* <motion.div variants={frameContainer}>
-                <Frame1 variants={frameAnim}>
-                    <motion.img variants={photoAnim} src={igdb_app} alt="igdb_app" />
-                </Frame1>
-                <Frame2 variants={frameAnim}>
-                    <motion.img variants={photoAnim} src={player_app} alt="player_app" />
-                </Frame2>
-                <Frame3 variants={frameAnim}>
-                    <motion.img variants={photoAnim} src={homepage1} alt="homepage" />
-                </Frame3>
-            </motion.div> */}
             <ProjectStyled>
                 <motion.h2 variants={fadeAnim}>Crypto HQ App</motion.h2>
                 <motion.div variants={lineAnim} className="line"></motion.div>
@@ -38,7 +27,7 @@ const MyProjects = () => {
                 <Link to="/work/crypto_hq">
                     <HideStyled>
                         <motion.img variants={photoAnim} src={crypto_hq} alt="crypto_hq" />
-                        <ClickMeStyled>
+                        <ClickMeStyled variants={ClickMeAnim}>
                             <ZoomInStyled />
                             <h1>PROJECT DETAILS</h1>
                         </ClickMeStyled>
@@ -53,7 +42,7 @@ const MyProjects = () => {
                 <Link to="/work/igdb_app">
                     <HideStyled>
                         <motion.img variants={photoAnim} src={igdb_app} alt="igdb_app" />
-                        <ClickMeStyled><ZoomInStyled /><h1>PROJECT DETAILS</h1></ClickMeStyled>
+                        <ClickMeStyled variants={ClickMeAnim}><ZoomInStyled /><h1>PROJECT DETAILS</h1></ClickMeStyled>
                     </HideStyled>
                 </Link>
             </ProjectStyled>
@@ -65,7 +54,7 @@ const MyProjects = () => {
                 <Link to="/work/player_app">
                     <HideStyled>
                         <motion.img variants={photoAnim} src={player_app} alt="player_app" />
-                        <ClickMeStyled><ZoomInStyled /><h1>PROJECT DETAILS</h1></ClickMeStyled>
+                        <ClickMeStyled variants={ClickMeAnim}><ZoomInStyled /><h1>PROJECT DETAILS</h1></ClickMeStyled>
                     </HideStyled>
                 </Link>
             </ProjectStyled>
@@ -77,7 +66,7 @@ const MyProjects = () => {
                 <Link to="/work/homepage">
                     <HideStyled>
                         <motion.img variants={photoAnim} src={homepage1} alt="homepage" />
-                        <ClickMeStyled><ZoomInStyled /><h1>PROJECT DETAILS</h1></ClickMeStyled>
+                        <ClickMeStyled variants={ClickMeAnim}><ZoomInStyled /><h1>PROJECT DETAILS</h1></ClickMeStyled>
                     </HideStyled>
                 </Link>
             </ProjectStyled>
@@ -148,7 +137,7 @@ overflow: hidden;
 position: relative;
 `
 
-const ClickMeStyled = styled.button`
+const ClickMeStyled = styled(motion.button)`
 position: absolute;
 display: flex;
 flex-direction: column;
