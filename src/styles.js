@@ -15,7 +15,7 @@ padding:  5rem 10rem;
 color: white;
 @media ( max-width: 1300px ) {
         flex-direction: column;
-        padding: 2rem 2rem;
+        padding: 0 2rem 2rem 2rem;
         text-align: center;
         justify-content: center;
     }
