@@ -58,7 +58,6 @@ const Contact = () => {
                     <InputStyled variants={pAnim} type="email" required {...register("email")} placeholder="e-mail"></InputStyled>
 
                     <TextareaStyled variants={pAnim} rows="11" placeholder="message" required minLength="40" {...register("message")}></TextareaStyled>
-
                     <ButtonStyled variants={fadeAnim2}>Send</ButtonStyled>
                 </FormBoxStyled>
             </FormContainerStyled>
