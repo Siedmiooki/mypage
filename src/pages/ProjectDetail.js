@@ -9,7 +9,7 @@ import ScrollTop from "../components/ScrollTop";
 const ProjectDetail = () => {
     const history = useHistory();
     const url = history.location.pathname;
-    const [projects, setProjects] = useState(ProjectState);
+    const [projects] = useState(ProjectState);
     const [project, setProject] = useState(null)
 
     useEffect(() => {
@@ -173,8 +173,8 @@ flex-direction: column;
 align-items: center;
 margin-bottom: 2rem;
 img {
-    width: 100%;
-    height: 70vh;
+    max-width: 60vw;
+    height: 100%;
     object-fit: cover;
 };
 @media ( max-width: 1300px ) {
@@ -183,8 +183,8 @@ img {
     img {
     object-fit: contain;
     width: 100%;
-    height: 40vh;
     padding: 1rem 0rem;
+    max-width: none;
     }
     }
 `

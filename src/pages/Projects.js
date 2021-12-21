@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import store_project from "../img/store_big.jpg";
 import crypto_hq from "../img/cryptoHQ_big.jpg";
 import igdb_app from "../img/igdb_app_big.jpg";
 import player_app from "../img/player_app_big2.jpg";
@@ -16,11 +17,28 @@ const MyProjects = () => {
     const [element, controls] = useScroll();
     const [element2, controls2] = useScroll();
     const [element3, controls3] = useScroll();
+    const [element4, controls4] = useScroll();
+    const [element5, controls5] = useScroll();
 
     return (
         <ProjectContainerStyled variants={pageAnim} initial="hidden" animate="show" exit="exit">
-            <ProjectStyled>
-                <motion.h2 variants={fadeAnim}>Crypto HQ App</motion.h2>
+            <ProjectStyled ref={element5} variants={fadeAnim} animate={controls5} initial="hidden">
+                <motion.h2 variants={fadeAnim}>Fashion Store</motion.h2>
+                <motion.div variants={lineAnim} className="line"></motion.div>
+                <motion.div variants={lineAnim2} className="line"></motion.div>
+                <motion.div variants={lineAnim3} className="line"></motion.div>
+                <Link to="/work/store_project">
+                    <HideStyled>
+                        <motion.img variants={photoAnim} src={store_project} alt="store_project" />
+                        <ClickMeStyled variants={ClickMeAnim}>
+                            <ZoomInStyled />
+                            <h1>PROJECT DETAILS</h1>
+                        </ClickMeStyled>
+                    </HideStyled>
+                </Link>
+            </ProjectStyled>
+            <ProjectStyled ref={element} variants={fadeAnim} animate={controls} initial="hidden">
+                <motion.h2 variants={fadeAnim} >Crypto HQ App</motion.h2>
                 <motion.div variants={lineAnim} className="line"></motion.div>
                 <motion.div variants={lineAnim2} className="line"></motion.div>
                 <motion.div variants={lineAnim3} className="line"></motion.div>
@@ -34,7 +52,7 @@ const MyProjects = () => {
                     </HideStyled>
                 </Link>
             </ProjectStyled>
-            <ProjectStyled ref={element} variants={fadeAnim} animate={controls} initial="hidden">
+            <ProjectStyled ref={element2} variants={fadeAnim} animate={controls2} initial="hidden">
                 <motion.h2 variants={fadeAnim}>Game Database App</motion.h2>
                 <motion.div variants={lineAnim} className="line"></motion.div>
                 <motion.div variants={lineAnim2} className="line"></motion.div>
@@ -46,7 +64,7 @@ const MyProjects = () => {
                     </HideStyled>
                 </Link>
             </ProjectStyled>
-            <ProjectStyled ref={element2} variants={fadeAnim} animate={controls2} initial="hidden">
+            <ProjectStyled ref={element3} variants={fadeAnim} animate={controls3} initial="hidden">
                 <h2>Player App</h2>
                 <motion.div variants={lineAnim} className="line"></motion.div>
                 <motion.div variants={lineAnim2} className="line"></motion.div>
@@ -58,7 +76,7 @@ const MyProjects = () => {
                     </HideStyled>
                 </Link>
             </ProjectStyled>
-            <ProjectStyled ref={element3} variants={fadeAnim} animate={controls3} initial="hidden">
+            <ProjectStyled ref={element4} variants={fadeAnim} animate={controls4} initial="hidden">
                 <h2>My Homepage</h2>
                 <motion.div variants={lineAnim} className="line"></motion.div>
                 <motion.div variants={lineAnim2} className="line"></motion.div>

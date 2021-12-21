@@ -7,9 +7,33 @@ import homepage2 from "./img/homepage_big2.jpg";
 import crypto1 from "./img/cryptoHQ_big.jpg";
 import crypto2 from "./img/cryptoHQ_big2.jpg";
 import crypto3 from "./img/cryptoHQ_big3.jpg";
+import store1 from "./img/store_big.jpg";
+import store2 from "./img/store_big2.jpg";
+import store3 from "./img/store_big3.jpg";
 
 export const ProjectState = () => {
     return [
+        {
+            title: "Fashion Store",
+            mainImg: store1,
+            secondaryImg: store2,
+            thirdImg: store3,
+            url: "/work/store_project",
+            git: "https://github.com/Siedmiooki/StoreApp",
+            live: "https://focused-northcutt-a97ce7.netlify.app",
+            info: [
+                {
+                    title: "Project overview",
+                    description:
+                        "Fashion Store Project was created on my GF request ;) I tryed to make simple, clear and functional online store with cart, favorites and order history.",
+                },
+                {
+                    title: "Technology",
+                    description:
+                        "Fashion Store Project was built with React, Redux Toolkit, Styled Component, Context State and ASOS Rapid API.",
+                },
+            ],
+        },
         {
             title: "Crypto HQ",
             mainImg: crypto1,
